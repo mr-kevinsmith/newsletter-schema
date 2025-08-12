@@ -10,12 +10,7 @@
         "properties": {
           "title": { "type": "string" },
           "url": { "type": "string", "format": "uri" },
-          "image_url": {
-            "oneOf": [
-              { "type": "string", "format": "uri" },
-              { "type": "string", "maxLength": 0 }
-            ]
-          },
+          "image_url": { "type": "string", "format": "uri" },
           "summary": { "type": "string" }
         },
         "required": ["title", "url", "image_url", "summary"]
