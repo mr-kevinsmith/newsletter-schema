@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Newsletter Schema",
+  "type": "object",
+  "properties": {
+    "selected": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "image_url": {
+            "oneOf": [
+              { "type": "string", "format": "uri" },
+              { "type": "string", "maxLength": 0 }
+            ]
+          },
+          "summary": { "type": "string" }
+        },
+        "required": ["title", "url", "image_url", "summary"]
+      }
+    }
+  },
+  "required": ["selected"]
+}
